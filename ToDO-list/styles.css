@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(2, 0, 36);
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(179, 13, 153, 1) 0%, rgba(92, 28, 220, 1) 73%, rgba(0, 212, 255, 1) 100%);
+    color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+    height: 100vh;
+
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(rgba(13, 0, 255, 0.356), rgba(255,255,255,.8), rgba(255, 1, 170, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(13, 255, 0);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+form button {
+    color: rgb(57, 23, 192);
+    background: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover,
+form input:focus {
+    background: linear-gradient(90deg, rgba(2, 0, 36, .7) 0%, rgba(51, 138, 236, 0.6) 0%, rgba(92, 28, 220, .7) 73%, rgba(0, 212, 255, 0.6) 100%);
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.todo-list {
+    width: 40%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all .7s ease;
+    /* align-items: center; */
+}
+
+.todo li {
+    flex: 1;
+
+}
+
+.trash-btn,
+.complete-btn {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(0, 255, 76);
+}
+
+.todo-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+    /* to make it clickable */
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+
+}
+
+.fall {
+    transform: translateY(25rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: rgb(0, 72, 255);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+option {
+    border-radius: 0;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: #4b14cd;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: transform 1s ease;
+}
+
+.select:active::after {
+    transform: rotate(360deg);
+}
+
+.select:hover::after {
+    background-color: linear-gradient(90deg, rgba(2, 0, 36, .7) 0%, rgba(51, 138, 236, 0.6) 0%, rgba(92, 28, 220, .7) 73%, rgba(0, 212, 255, 0.6) 100%);
+    color: #cd1414;
+}

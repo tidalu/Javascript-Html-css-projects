@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.721);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+span {
+    /* background: url('https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/heart-1024.png'); */
+    background-image: url('https://cdn1.iconfinder.com/data/icons/3d-front-color/512/heart-front-color.png');
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    left: 50%;
+    pointer-events: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -5000%) rotateY(360deg);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
