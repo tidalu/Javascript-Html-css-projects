@@ -22,3 +22,5 @@ live previews
 16.Auto Text effect Animation - https://text-effect-tidalu.netlify.app/
 17.Tabs Section - https://mult-tabs.netlify.app/
 18. Reviews - https://review-tidalu.netlify.app/
+19. colorGenerator - https://color-generator-tidalu.netlify.app/
+20.counter2 - https://counter-2tidalu.netlify.app/
