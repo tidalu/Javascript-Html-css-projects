@@ -21,3 +21,4 @@ live previews
 15.Dark-light mode Toggle - https://dark-light-tidalu.netlify.app/
 16.Auto Text effect Animation - https://text-effect-tidalu.netlify.app/
 17.Tabs Section - https://mult-tabs.netlify.app/
+18. Reviews - https://review-tidalu.netlify.app/
