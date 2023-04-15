@@ -26,3 +26,5 @@ live previews
 20.counter2 - https://counter-2tidalu.netlify.app/
 21.Navbar toggle - https://navbar-toggle-tidalu.netlify.app/
 22.Sidebar - https://sidebar-tidalu.netlify.app/
+23. Modal - https://modal-tidalu.netlify.app/
+
