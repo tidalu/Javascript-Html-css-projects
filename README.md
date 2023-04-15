@@ -25,3 +25,4 @@ live previews
 19. colorGenerator - https://color-generator-tidalu.netlify.app/
 20.counter2 - https://counter-2tidalu.netlify.app/
 21.Navbar toggle - https://navbar-toggle-tidalu.netlify.app/
+22.Sidebar - https://sidebar-tidalu.netlify.app/
