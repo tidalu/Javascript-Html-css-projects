@@ -24,3 +24,4 @@ live previews
 18. Reviews - https://review-tidalu.netlify.app/
 19. colorGenerator - https://color-generator-tidalu.netlify.app/
 20.counter2 - https://counter-2tidalu.netlify.app/
+21.Navbar toggle - https://navbar-toggle-tidalu.netlify.app/
