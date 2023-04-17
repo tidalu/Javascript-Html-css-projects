@@ -1,0 +1,1 @@
+So here we have simple google main page with some functionalities, I will modify it soon
