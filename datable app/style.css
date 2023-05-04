@@ -23,6 +23,10 @@ body {
     flex-grow: 1;
     padding: 20px 0;
 }
+
+.display {
+    display: none;
+}
 .input input {
     width: 60%;
     height: 20px;
