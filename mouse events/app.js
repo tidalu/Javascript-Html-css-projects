@@ -18,7 +18,6 @@ function animtime() {
 }
 function element() {
     const element = document.createElement('div');
-    
     // element.addEventListener('mouseleave', function(){
     //     element.addEventListener('contextmenu', function(event){
     //         console.log('hello')
@@ -31,16 +30,12 @@ function element() {
     element.style.height = sizeEL + 'px';
     element.style.display = 'block';
     body.appendChild(element);
-    element.addEventListener('click', function(e){
-        console.log(e.target);
+    element.addEventListener('mouseenter', function(e){
+        console.log(e.target);                                                                  
         // element.removeEventListener('mousemove', centerCircle, false);
     });
     return element;
 }
-
-
-
-
 function elementAnimation(circle){
     const time = animtime();
     circle.style.animation = `shrink`
@@ -68,5 +63,4 @@ body.addEventListener("click", (event) => {
     // circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
 });
 
-
-
+// 
