@@ -10,37 +10,63 @@ function hexcolor() {
     }
     return color;
 }
-function size() {
-    return Math.floor(Math.random() * 200);
+function size(min, max) {
+    return Math.floor(Math.random() * (max-min)+min);
 }
 function animtime() {
     return Math.floor(Math.random() * 12);
 }
 function element() {
     const element = document.createElement('div');
+    
+    // element.addEventListener('mouseleave', function(){
+    //     element.addEventListener('contextmenu', function(event){
+    //         console.log('hello')
+    //     });
+    // });
     element.classList.add('circle');
-    body.appendChild(element);
-    var sizeEL = size();
+    var sizeEL = size(50, 200);
     element.style.backgroundColor = hexcolor();
     element.style.width = sizeEL + 'px';
     element.style.height = sizeEL + 'px';
-    element.animation = `shrink ${animtime()}s linear infinite`
-    setTimeout(() => {
-        body.removeChild(element);
-    }, animtime() * 1000);
+    element.style.display = 'block';
+    body.appendChild(element);
+    element.addEventListener('click', function(e){
+        console.log(e.target);
+        // element.removeEventListener('mousemove', centerCircle, false);
+    });
     return element;
 }
-var circle = element();
-window.addEventListener("mousemove", (event) => {
-    circle.style.left = `${event.clientX - circle.offsetWidth / 2}px`;
-    circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
-});
-body.addEventListener("click", (event) => {
-    circle = element();
-    // console.log(typeof circle.style.width);
-    circle.style.left = `${event.clientX - circle.offsetWidth / 2}px`;
-    circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
 
-    
+
+
+
+function elementAnimation(circle){
+    const time = animtime();
+    circle.style.animation = `shrink`
+    circle.style.animationFillMode = `forwards`
+    circle.style.animationDuration = `${time}s`
+    console.log(time);
+    setTimeout(() => {
+        circle.remove();
+    },time * 1000);
+}
+var circle = element();
+window.addEventListener("mousemove", centerCircle );
+function centerCircle(event){
+    circle.style.left = `${event.clientX - circle.offsetWidth / 2}px`;
+    circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
+}
+body.addEventListener("click", (event) => {
+    // elementAnimation(circle);
+    circle.style.left = `${event.clientX - circle.offsetWidth / 2}px`;
+    circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
+    // circle = {}
+    // circle.style.zIndex = 1;
+    circle = element();
+    // circle.style.left = `${event.clientX - circle.offsetWidth / 2}px`;
+    // circle.style.top = `${event.clientY - circle.offsetHeight / 2}px`;
 });
+
+
 
